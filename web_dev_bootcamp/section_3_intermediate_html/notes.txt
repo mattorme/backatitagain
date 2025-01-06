@@ -1,0 +1,9 @@
+# Notes
+
+- Lists
+- - <ul> for dot points
+- - <ol> for numbered points
+- - both included list items <li> within them
+- - you can also nest lists for <ul> (dot points)
+- - indententation is super important for readability
+
