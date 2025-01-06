@@ -11,5 +11,15 @@
 - - - - - Go to a h2 tag
 - - - - Don't skip a tag level e.g. h1 -> h3
 - - - - - Go down the numeric order
+
 - - Paragraph tags
-- - - 
+- - - Good for long form text, mostly unstyled
+
+- - Self closing tags
+- - - tags without content in between
+- - - - <hr /> creates a line if put between two <p> tags
+- - - - <br /> throws a new line, can use in the middle of <p> tags
+- - - Do's and Don'ts
+- - - - Don't add a break just to seperate two paragraphs
+- - - - Do add a new paragraph tag to seperate the two
+- - - Sometimes might see horizontal rule element without the "/", both are fine
