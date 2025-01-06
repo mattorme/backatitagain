@@ -7,3 +7,7 @@
 - - you can also nest lists for <ul> (dot points)
 - - indententation is super important for readability
 
+- link tags
+- - look like this <a>
+- - include "attributes"
+- - - "href" attribute links to url
