@@ -1,0 +1,5 @@
+- file paths
+- - ../ to go back
+- - ./ to stay in current directory
+- - / also works but not all the time
+

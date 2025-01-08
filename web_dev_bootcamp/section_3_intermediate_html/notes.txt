@@ -18,8 +18,3 @@
 - - - can be a url, but more than likely links to images in project folder
 - - "alt" attribute includes description of text
 - - - super important for accessibility
-
-- file paths
-- - ../ to go back
-- - ./ to stay in current directory
-- - / also works but not all the time
