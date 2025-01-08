@@ -1,0 +1,8 @@
+- CSS
+- - Can be inline
+- - - not reccomended
+- - Can be in seperate stylesheet
+- - - reccomended
+- - How to Link
+- - - use link tag in the head tag
+- - - - href attribute points to where the stylesheet is located
