@@ -1,3 +1,23 @@
 - CSS colours
 - - RGB (00, 00 ,00)
 - - Hex Code #001122
+
+- Font sizes
+- - 1px is 1/96th inch
+- - 1pt is 1/72nd inch
+- - 1em is 100% of parent
+- - 1rem is 100% of root
+
+- Font weight
+- - normal / bold (keywords)
+- - lighter to bolder
+- - - relative to parent
+- - can use number 100-900
+
+- Font family
+- - determines what font is used
+- - - first font is what is used, second font is backup font (generic) if first cannot load
+- paste link from google font inside the head tag
+
+- Text alignment
+- - text-align: center;
