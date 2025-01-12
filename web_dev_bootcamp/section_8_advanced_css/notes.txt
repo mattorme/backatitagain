@@ -1,0 +1,8 @@
+- CSS Display
+- - block vs inline display
+- - - block takes up entire "line" (full width)
+- - - inline can have elements side by side
+- - can't set width/height to inline elements
+- - with inline-block you can
+- - - it's an inline display with block attributes
+- - display: none; makes the element disappear
