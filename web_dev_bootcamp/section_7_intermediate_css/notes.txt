@@ -3,3 +3,9 @@
 - - The last thing the CSS reads (external) is what gets applied
 - - #element -> [attribute] -> .class -> element
 - - !important overrides all
+
+- Combining CSS selectors
+- - .class p
+- - - applies to all p tags within the .class 
+- - you can also group selectors
+- - can use > to select the child of a div
