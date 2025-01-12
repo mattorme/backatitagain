@@ -6,3 +6,8 @@
 - - with inline-block you can
 - - - it's an inline display with block attributes
 - - display: none; makes the element disappear
+
+- CSS Float
+- - allows text to wrap around images
+- - think newspaper style layouts
+- - clear attribute makes float not apply to element
