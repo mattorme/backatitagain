@@ -1,0 +1,5 @@
+- The cascade in CSS
+- - inline -> internal -> external
+- - The last thing the CSS reads (external) is what gets applied
+- - #element -> [attribute] -> .class -> element
+- - !important overrides all
