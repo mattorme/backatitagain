@@ -9,3 +9,11 @@
 - - - applies to all p tags within the .class 
 - - you can also group selectors
 - - can use > to select the child of a div
+
+- CSS Positioning
+- - static positioning
+- - - HTML default positioning
+- - relative positioning
+- - - moves relative from where it was
+- - absolute positioning
+- - - positioned relative to nearest positioned ancestor (or top left corner of webpage)
