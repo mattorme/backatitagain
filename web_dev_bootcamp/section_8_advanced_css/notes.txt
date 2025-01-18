@@ -11,3 +11,8 @@
 - - allows text to wrap around images
 - - think newspaper style layouts
 - - clear attribute makes float not apply to element
+
+- Responsive Websites
+- - breakpoints to change CSS of Websites
+- - - made for different size devices
+- - can use things such as media queries, CSS Grid, CSS Flexbox, or external framworks such as Bootstrap
