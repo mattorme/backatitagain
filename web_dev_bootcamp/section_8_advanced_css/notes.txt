@@ -16,3 +16,11 @@
 - - breakpoints to change CSS of Websites
 - - - made for different size devices
 - - can use things such as media queries, CSS Grid, CSS Flexbox, or external framworks such as Bootstrap
+
+- Media queries
+- - max-width 
+- - - is basically and if or statement
+- - - - if width is 600px or less, apply this CSS
+- - min width
+- - - is opposite of max-width
+- - can combine together for if (in between) min:600 and max:900 etc
