@@ -18,6 +18,7 @@ h1 {
 .tile-image {
   width: 400px;
   float: left;
+  margin-right: 25px;
 }
 
 .left {
@@ -32,7 +33,39 @@ h1 {
   width: 45%;
 }
 
+.card-title {
+  padding-top: 30px;
+}
+
 footer {
   text-align: right;
   color: midnightblue;
+}
+
+@media (max-width: 900px) {
+  .tile-image {
+    float: none;
+  }
+  .left {
+    float: none;
+  }
+
+  .right {
+    float: none;
+  }
+
+  .card-title {
+    text-align: center;
+  }
+
+  .card-text {
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+  .tile-image {
+    width: 100%;
+  }
 }
