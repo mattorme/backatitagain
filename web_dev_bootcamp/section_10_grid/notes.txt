@@ -1,3 +1,8 @@
 - Display: Grid
 - - grid-template-columns to distribute the grid items
 
+- Grid Sizing
+- - can combine grid templates into grid-template
+- - - e.g. grid-template: 100px 200px / 400px 800px;
+- - use repeat(int, sizepx) 
+- - - same as doing 1fr 1fr 1fr etc.
