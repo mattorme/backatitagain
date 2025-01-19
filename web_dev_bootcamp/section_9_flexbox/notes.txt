@@ -2,5 +2,13 @@
 - - display:flex takes up 100% of width (like display:block)
 - - display:inline-flex acts like display:inline property
 
-- Flex Direction
-- - 
+- Flex Layout
+- - order property can change the order of items in Flexbox
+- - flex-wrap property is set to nowrap by default
+- - - not very responsive
+- - flex-wrap:wrap wraps your items to a new line if needed
+- - justify-content can fix positioning
+- - - works along x-axis
+- - align-items can fix positioning
+- - - works along y-axis
+- - - need to set height
