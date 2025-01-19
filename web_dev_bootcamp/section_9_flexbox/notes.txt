@@ -1,0 +1,3 @@
+- Flexbox
+- - display:flex takes up 100% of width (like display:block)
+- - display:inline-flex acts like display:inline property
