@@ -12,3 +12,6 @@
 - - align-items can fix positioning
 - - - works along y-axis
 - - - need to set height
+
+- Flex Sizing
+- - max-width on flex items
