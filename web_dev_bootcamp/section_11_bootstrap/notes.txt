@@ -1,0 +1,3 @@
+- Bootstrap
+- - mobile first approach
+- - 12 column system
