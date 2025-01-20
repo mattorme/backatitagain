@@ -1,3 +1,7 @@
 - Bootstrap
 - - mobile first approach
 - - 12 column system
+
+- Bootstrap layout
+- - don't need media queries as much, Bootstrap has it covered
+- - 
