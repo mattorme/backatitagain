@@ -1,0 +1,7 @@
+- Data Types
+- - string
+- - - not code, interpreted as text within ""
+- - numbers
+- - boolean
+- - - true or false
+- - 
