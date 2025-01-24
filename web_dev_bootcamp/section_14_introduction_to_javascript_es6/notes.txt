@@ -4,4 +4,8 @@
 - - numbers
 - - boolean
 - - - true or false
+
+- JavaScript Variables
+- - keyword (variable type) + variable name = variable value
+- - - var myName = "Matt"
 - - 
