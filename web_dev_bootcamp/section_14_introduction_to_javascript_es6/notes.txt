@@ -8,4 +8,8 @@
 - JavaScript Variables
 - - keyword (variable type) + variable name = variable value
 - - - var myName = "Matt"
-- - 
+
+- Slice
+- - .slice(num, num)
+- - slices from position number to position number
+- - - e.g. variable.slice(0, 5)
