@@ -3,6 +3,18 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var btns = document.querySelectorAll(".btn");
 var userClickedPattern = [];
+var hasGameStarted = false;
+var level = 0;
+var titleInnerHTML = document.getElementById("level-title");
+
+// Waiting for user click to start game
+document.addEventListener("keydown", function () {
+  if (hasGameStarted === false) {
+    titleInnerHTML.innerHTML = "Level " + level;
+    nextSequence();
+  }
+  hasGameStarted = true;
+});
 
 // Main function that generates the sequence
 function nextSequence() {
@@ -11,12 +23,10 @@ function nextSequence() {
   var buttonChosen = document.querySelector("." + randomChosenColour).id;
 
   gamePattern.push(randomChosenColour);
-
   addButtonAnimation(buttonChosen);
-
   playSound(buttonChosen);
-
-  console.log(gamePattern);
+  level = level + 1;
+  titleInnerHTML.innerHTML = "Level " + level;
 }
 
 // Event listeners to look for which button has been pressed
@@ -27,7 +37,6 @@ for (var i = 0; i < btns.length; i++) {
     addButtonAnimation(buttonId);
     var userChosenColour = buttonId;
     userClickedPattern.push(userChosenColour);
-    console.log(userClickedPattern);
   });
 }
 
