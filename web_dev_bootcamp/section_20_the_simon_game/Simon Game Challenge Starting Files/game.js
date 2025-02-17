@@ -1,7 +1,8 @@
 // Variables
 var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
-let btns = document.querySelectorAll(".btn");
+var btns = document.querySelectorAll(".btn");
+var userClickedPattern = [];
 
 // Main function that generates the sequence
 function nextSequence() {
@@ -20,6 +21,9 @@ for (var i = 0; i < btns.length; i++) {
     var buttonId = this.id;
     makeSound(buttonId);
     addButtonAnimation(buttonId);
+    var userChosenColour = buttonId;
+    userClickedPattern.push(userChosenColour);
+    console.log(userClickedPattern);
   });
 
   btns[i].addEventListener("mouseup", function () {
