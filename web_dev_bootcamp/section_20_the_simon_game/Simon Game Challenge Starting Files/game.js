@@ -8,33 +8,32 @@ var userClickedPattern = [];
 function nextSequence() {
   var randomNumber = Math.floor(Math.random() * 4);
   var randomChosenColour = buttonColours[randomNumber];
-  var buttonChosen = document.querySelector("." + randomChosenColour);
+  var buttonChosen = document.querySelector("." + randomChosenColour).id;
 
   gamePattern.push(randomChosenColour);
 
-  console.log(buttonChosen);
+  addButtonAnimation(buttonChosen);
+
+  playSound(buttonChosen);
+
+  console.log(gamePattern);
 }
 
 // Event listeners to look for which button has been pressed
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("mousedown", function () {
+  btns[i].addEventListener("click", function () {
     var buttonId = this.id;
-    makeSound(buttonId);
+    playSound(buttonId);
     addButtonAnimation(buttonId);
     var userChosenColour = buttonId;
     userClickedPattern.push(userChosenColour);
     console.log(userClickedPattern);
   });
-
-  btns[i].addEventListener("mouseup", function () {
-    var buttonId = this.id;
-    removeButtonAnimation(buttonId);
-  });
 }
 
 // Function to play the sounds
-function makeSound(btn) {
-  switch (btn) {
+function playSound(name) {
+  switch (name) {
     case "green":
       var btnGreen = new Audio("sounds/green.mp3");
       btnGreen.play();
@@ -57,13 +56,10 @@ function makeSound(btn) {
 }
 
 // Add animation
-function addButtonAnimation(currentButton) {
-  var activeButton = document.querySelector("." + currentButton);
+function addButtonAnimation(currentColour) {
+  var activeButton = document.querySelector("." + currentColour);
   activeButton.classList.add("pressed");
-}
-
-// Remove animation
-function removeButtonAnimation(currentButton) {
-  var activeButton = document.querySelector("." + currentButton);
-  activeButton.classList.remove("pressed");
+  setTimeout(() => {
+    activeButton.classList.remove("pressed"); // Remove the class after 100ms
+  }, 100);
 }
