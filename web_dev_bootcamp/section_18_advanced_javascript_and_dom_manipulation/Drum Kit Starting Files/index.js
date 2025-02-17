@@ -7,9 +7,15 @@ let btns = document.querySelectorAll("button");
 // });
 
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function () {
+  btns[i].addEventListener("mousedown", function () {
     var buttonInnerHTML = this.innerHTML;
     makeSound(buttonInnerHTML);
+    addButtonAnimation(buttonInnerHTML);
+  });
+
+  btns[i].addEventListener("mouseup", function () {
+    var buttonInnerHTML = this.innerHTML;
+    removeButtonAnimation(buttonInnerHTML);
   });
 }
 
@@ -50,4 +56,19 @@ function makeSound(key) {
 
 document.addEventListener("keydown", function (event) {
   makeSound(event.key);
+  addButtonAnimation(event.key);
 });
+
+document.addEventListener("keyup", function (event) {
+  removeButtonAnimation(event.key);
+});
+
+function addButtonAnimation(currentKey) {
+  var activeButton = document.querySelector("." + currentKey);
+  activeButton.classList.add("pressed");
+}
+
+function removeButtonAnimation(currentKey) {
+  var activeButton = document.querySelector("." + currentKey);
+  activeButton.classList.remove("pressed");
+}
