@@ -29,14 +29,32 @@ function nextSequence() {
   titleInnerHTML.innerHTML = "Level " + level;
 }
 
+// Function that checks answers
+function checkAnswer() {
+  //   if (gamePattern[-1] == userClickedPattern[-1]) {
+  //     // console.log("wooo");
+  //     nextSequence();
+  //   } else {
+  //     // console.log("boo");
+  //   }
+  for (var i = 0; i < userClickedPattern.length; i++) {
+    if (gamePattern[i] == userClickedPattern[i]) {
+      nextSequence();
+    } else {
+      console.log("game over");
+    }
+  }
+}
+
 // Event listeners to look for which button has been pressed
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
     var buttonId = this.id;
-    playSound(buttonId);
-    addButtonAnimation(buttonId);
     var userChosenColour = buttonId;
+
     userClickedPattern.push(userChosenColour);
+
+    checkAnswer();
   });
 }
 
