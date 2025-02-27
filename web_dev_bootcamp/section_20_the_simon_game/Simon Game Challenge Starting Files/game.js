@@ -31,19 +31,45 @@ function nextSequence() {
 
 // Function that checks answers
 function checkAnswer() {
-  //   if (gamePattern[-1] == userClickedPattern[-1]) {
-  //     // console.log("wooo");
-  //     nextSequence();
-  //   } else {
-  //     // console.log("boo");
-  //   }
   for (var i = 0; i < userClickedPattern.length; i++) {
-    if (gamePattern[i] == userClickedPattern[i]) {
-      nextSequence();
+    if (
+      gamePattern[gamePattern.length - 1] ==
+        userClickedPattern[userClickedPattern.length - 1] &&
+      gamePattern.length == userClickedPattern.length
+    ) {
+      console.log("next sequence");
+      console.log(userClickedPattern[userClickedPattern.length - 1]);
+      console.log(gamePattern[gamePattern.length - 1]);
+      userClickedPattern = [];
+      setTimeout(() => {
+        nextSequence(); // Remove the class after 100ms
+      }, 1000);
+    } else if (
+      gamePattern[i] == userClickedPattern[i] &&
+      gamePattern.length != userClickedPattern.length
+    ) {
+      console.log("waiting");
     } else {
-      console.log("game over");
+      gameOver();
     }
   }
+}
+
+function gameOver() {
+  titleInnerHTML.innerHTML = "You Lost! Press Any Key to Start";
+
+  hasGameStarted = false;
+  level = 0;
+  gamePattern = [];
+  userClickedPattern = [];
+
+  document.addEventListener("keydown", function () {
+    if (hasGameStarted === false) {
+      titleInnerHTML.innerHTML = "Level " + level;
+      nextSequence();
+    }
+    hasGameStarted = true;
+  });
 }
 
 // Event listeners to look for which button has been pressed
@@ -51,6 +77,9 @@ for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
     var buttonId = this.id;
     var userChosenColour = buttonId;
+
+    addButtonAnimation(buttonId);
+    playSound(buttonId);
 
     userClickedPattern.push(userChosenColour);
 
