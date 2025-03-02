@@ -1,0 +1,23 @@
+
+- Commands
+
+- - ls = list
+- - - ls -a
+- - - - lists all items
+
+- - cd = change directory
+- - - press tab to auto complete
+- - cd ~
+- - - goes back
+
+- - mkdir = make directory
+
+- - touch = create file
+
+- - open = open file
+
+- - rm = delete file
+- - - rm * = deletes all files in current directory
+- - - rm -r = delete directory
+
+- - pwd = print working directory
