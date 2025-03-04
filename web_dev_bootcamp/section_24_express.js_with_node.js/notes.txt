@@ -1,3 +1,11 @@
 - express.js
 - - backend framework for javascript
 - - is used with basically every project that uses node.js
+
+- creating an express server
+- - create directory
+- - create index.js file
+- - initialise NPM
+- - install the express package
+- - write server application in index.js
+- - start the server
