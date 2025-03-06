@@ -17,11 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   //Step 1 - Make the get route work and render the index.ejs file.
-  let currentDate = new Date();
-  let currentYear = currentDate.getFullYear();
-  res.render("index.ejs", {
-    year: currentYear
-  });
+  res.render("index.ejs");
 });
 
 app.post("/submit", (req, res) => {
@@ -36,13 +32,8 @@ app.post("/submit", (req, res) => {
   let nounIndex = Math.floor(Math.random() * noun.length);
   let bandName = adj[adjIndex] + " " + noun[nounIndex];
 
-  let currentDate = new Date();
-  let currentYear = currentDate.getFullYear();
-
-
   res.render("index.ejs", {
     bandName: bandName,
-    year: currentYear
   });
 });
 
