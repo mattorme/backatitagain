@@ -10,7 +10,7 @@
     <div class="container">
         <h1>Matt's Blog Posts</h1>
         <div class="form-container">
-            <form action="/submit">
+            <form action="/submit" method="POST">
                 <input type="text" name="heading" placeholder="Heading">
                 <input type="text" name="content" placeholder="Content">
                 <button type="submit">Post</button>
@@ -23,11 +23,14 @@
             <div class="col-md-6">
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
-                  <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
                   <h3 class="mb-0"><%= heading[i] %></h3>
                   <!-- <div class="mb-1 text-body-secondary">Nov 12</div> -->
                   <p class="card-text mb-auto"><%= content[i] %></p>
-                </div>
+                  <form action="/delete" method="POST">
+                  <input type="hidden" name="blogId" value="<%= blogId[i] %>">
+                  <button type="submit">Delete</button>
+                </form>
+                    </div>
               </div>
             </div>
           </div>    
