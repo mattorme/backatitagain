@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 let data;
 
 app.get("/", (req, res) => {
-  res.render("index.ejs", { recipe: data });
+  res.render("index.ejs", {recipe: data});
 });
 
 
@@ -24,15 +24,15 @@ app.post("/recipe", (req, res) => {
   switch (req.body.choice) {
     case "chicken":
       data = JSON.parse(recipeJSON)[0];
-      break;
+    break;
     case "beef":
       data = JSON.parse(recipeJSON)[1];
-      break;
+    break;
     case "fish":
       data = JSON.parse(recipeJSON)[2];
-      break;
+    break;
     default:
-      break;
+    break;
   }
   res.redirect("/");
 
